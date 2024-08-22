@@ -22,8 +22,9 @@ import GrficoRoles from '@/components/DireccionGeneral/GraficosDG/GrficoRoles.vu
 // Recursos Humanos
 import PersonalMedico from '@/components/RecursosHumanos/PersonalMedico.vue';
 import DashboardPesonalMedico from  '@/components/RecursosHumanos/DashboardPersonalMedico.vue';
-
-
+import AreasMedicas from '@/components/RecursosHumanos/AreasMedicas.vue'
+import Puestos from '@/components/RecursosHumanos/Puesto.vue'
+import PuestosDepartamentos from '@/components/RecursosHumanos/PuestosDepartamentos.vue'
 
 const roleMap = {
   1: 'Administrativo',
@@ -177,6 +178,24 @@ const router = createRouter({
           path: '/dashboardPersonal',
           name: 'dashboardPersonal',
           component: DashboardPesonalMedico,
+          // meta: { requiresRole: ['Direccion General, Administrativo'] }
+        },
+        {
+          path: '/areasMedicas',
+          name: 'areasMedicas',
+          component: AreasMedicas,
+          // meta: { requiresRole: ['Direccion General, Administrativo'] }
+        },
+        {
+          path: '/puestos',
+          name: 'puestos',
+          component: Puestos,
+          // meta: { requiresRole: ['Direccion General, Administrativo'] }
+        },
+        {
+          path: '/puestosDepartamentos',
+          name: 'puestosDepartamentos',
+          component: PuestosDepartamentos,
           // meta: { requiresRole: ['Direccion General, Administrativo'] }
         },
       ]
