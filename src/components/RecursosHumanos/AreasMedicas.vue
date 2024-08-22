@@ -36,7 +36,7 @@
     data() {
       return {
         data: [],
-        token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJOb21icmVfVXN1YXJpbyI6ImFtZXJpY3giLCJDb3JyZW9fRWxlY3Ryb25pY28iOiJhQGdtYWlsLmNvbSIsIkNvbnRyYXNlbmEiOiIxMjM0IiwiTnVtZXJvX1RlbGVmb25pY29fTW92aWwiOiI3NjQxMDIyNDM2In0.G5tRwfSH2X9LXmB0Dr6T_NjcEVk_FUATK9cBATHbZrA.eyJOb21icmVfVXN1YXJpbyI6ImFtZXJpY3giLCJDb3JyZW9fRWxlY3Ryb25pY28iOiJhQGdtYWlsLmNvbSIsIkNvbnRyYXNlbmEiOiIxMjM0IiwiTnVtZXJvX1RlbGVmb25pY29fTW92aWwiOiI3NjQxMDIyNDM2In0.G5tRwfSH2X9LXmB0Dr6T_NjcEVk_FUATK9cBATHbZrA'  // Reemplaza con tu token real
+        token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJOb21icmVfVXN1YXJpbyI6InJpY2FyZG8iLCJDb3JyZW9fRWxlY3Ryb25pY28iOiJzdHJpbmciLCJDb250cmFzZW5hIjoiMTIzIiwiTnVtZXJvX1RlbGVmb25pY29fTW92aWwiOiJzdHJpbmcifQ.dWVoAwB2f4vq25slE0WlVBldvg4xXL7ixyflkUYCodk'  // Reemplaza con tu token real
       };
     },
     mounted() {
@@ -44,7 +44,7 @@
     },
     methods: {
       fetchData() {
-        axios.get('http://localhost:8000/areas_medicas', {
+        axios.get('https://privilegecare-deploy-gqmt.onrender.com/areas_medicas', {
           headers: {
             'Authorization': `Bearer ${this.token}`  // Agrega el token en el encabezado
           }
